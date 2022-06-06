@@ -1,0 +1,126 @@
+.input {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.input__box {
+    width: 100%;
+    /* border-radius: 50px; */
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+
+}
+
+.input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+
+
+.input_submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    right: 0px;
+    border: none;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    transition: 0.2s all ease-in;
+    box-shadow: 0 0 10px black;
+    opacity: 0.5;
+}
+
+/* animation - hovering */
+.input_submit:hover {
+    opacity: 1;
+}
+
+/* animation - when clicked */
+.input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+/* text - in box, todo */
+.todos {
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+/* box, todo - background image */
+.todos__single {
+    display: flex;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    /* border-radius: 5px; */
+    padding: 20px;
+    margin-top: 15px;
+    /* background-image: url("https://cdn.pixabay.com/photo/2015/01/26/17/01/goat-hair-612872_1280.jpg"); */
+    background-color: burlywood;
+    transition: 0.2s;
+  }
+
+  .todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 30px;
+  }
+
+  .todos__single--text:focus {
+    outline: none;
+  }
+
+@media (max-widwth: 700px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+    }
+    .todos__single {
+        width: 100%;
+    }
+}
+
+
+@media (max-widwth: 1200px) {
+    .todos_single {
+        width: 40%;
+    }
+}
+
+
+.icon {
+    font-size: 30px;
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.iconDone {
+    /* position: relative; */
+
+    /* right: 0; */
+    /* top: 0; */
+    /* margin: 10px; */
+    font-size: 30px;
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.icon__container {
+    display: flex;
+}
