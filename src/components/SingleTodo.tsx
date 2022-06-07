@@ -7,6 +7,9 @@ import { FaCheckCircle } from "react-icons/fa"
 import "./styles.css"
 import TodoList from './TodoList'
 
+import { GrCheckbox as Box }  from 'react-icons/gr'
+import { GrCheckboxSelected as BoxTwo } from 'react-icons/gr' 
+
 type Props = {
   todo: Todo,
   todos: Todo[],
@@ -17,13 +20,16 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
-
+  const [tick, setTick] = useState(false)
+  
 // usual status - done, middle cross
   const handleDone = (id: number) => {
     setTodos(
       todos.map((todo)=>todo.id === id?{...todo, isDone: !todo.isDone} : todo
       )
     );
+    // to toggle that tick(done) icon
+    setTick(!tick)
   };
 
   const handleDelete = (id: number) => {
@@ -76,7 +82,6 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
 
         {/* Side menu - edit, delete, cross(done) */}
         <div className="icon__container">
-        {/* <div> */}
           {/* edit */}
           <span 
             className="icon"
@@ -88,24 +93,24 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
             >
             <AiFillEdit />  
           </span> 
-        {/* </div> */}
-        {/* <div> */}
           {/* delete */}
           <span 
             className="icon" 
             onClick={() => handleDelete(todo.id)}>
             <AiFillDelete />
           </span>
-        
-        {/* </div> */}
           {/* cross middl, done */}
         {/* <div className="iconDone"> */}
           <span 
             className="iconDone" 
             onClick={() => handleDone(todo.id)}>
-            <FaCheckCircle />
+              {tick ? (
+                  <BoxTwo className="tickIcon" />
+                  ) : (
+                  <Box className="tickFillIcon" />
+              )}
           </span>
-        {/* </div> */}
+
       </div>
 
       </form>
