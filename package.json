@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "seed-todolist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mireu-san.github.io",
+  "homepage": "https://mireu-san.github.io/seed-todolist/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
