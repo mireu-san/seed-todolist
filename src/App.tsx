@@ -23,7 +23,8 @@ const App: React.FC = () => {
       <span className="subHeading">What problem would you solve before going to bed tonight?</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TodoList todos={todos} setTodos={setTodos} />
-      <span className="subHeading">Remember, your health is top priority to utilise your work efficiency as well.</span>
+      <span className="subHeading">Eat, Sleep, Exercise well! Healthy body, healthy mind.</span>
+      <span className="subHeading">Press 'enter' key to confirm the editing.</span>
       
     </div>
   )
